@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tron Forge Limited | Affordable Advertising & E-commerce</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+         :root {
+            --primary: #ff6b00;
+            --primary-dark: #e05a00;
+            --accent: #00c8ff;
+            --accent-dark: #00a8d8;
+            --dark: #0a0f1f;
+            --darker: #050812;
+            --light: #f0f5ff;
+            --gray: #a0b0d0;
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            --glow: 0 0 15px rgba(0, 200, 255, 0.5);
+            --price-glow: 0 0 20px rgba(255, 107, 0, 0.5);
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--darker);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: radial-gradient(circle at 10% 20%, rgba(255, 107, 0, 0.05) 0%, transparent 20%), radial-gradient(circle at 90% 80%, rgba(0, 200, 255, 0.05) 0%, transparent 20%);
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        /* Header Styles */
+        
+        header {
+            background-color: rgba(10, 15, 31, 0.9);
+            box-shadow: 0 2px 20px rgba(255, 107, 0, 0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 107, 0, 0.1);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-shadow: var(--glow);
+        }
+        
+        .logo-icon {
+            color: var(--primary);
+            font-size: 2.2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--light);
+            font-weight: 500;
+            font-size: 1.1rem;
+            position: relative;
+            padding: 5px 0;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--accent);
+        }
+        /* Hero Section */
+        
+        .hero {
+            padding: 180px 0 100px;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(10, 15, 31, 0.7), rgba(10, 15, 31, 0.9)), url('image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="rgba(0,200,255,0.05)" stroke-width="1"/></svg>');
+            background-size: 40px 40px;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 650px;
+        }
+        
+        .hero-text h1 {
+            font-size: 3.8rem;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--accent), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 20px rgba(0, 200, 255, 0.3);
+        }
+        
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--gray);
+            max-width: 600px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 36px;
+            background: transparent;
+            color: var(--accent);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            border: 2px solid var(--accent);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: var(--accent);
+            z-index: -1;
+            transition: var(--transition);
+        }
+        
+        .btn:hover::before {
+            width: 100%;
+        }
+        
+        .btn:hover {
+            color: var(--darker);
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+            box-shadow: var(--price-glow);
+        }
+        
+        .btn-primary::before {
+            background: var(--accent);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent);
+            margin-left: 15px;
+            box-shadow: none;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--accent);
+            color: var(--darker);
+        }
+        /* Services Section */
+        
+        .services {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+            text-shadow: var(--glow);
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            max-width: 650px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: rgba(15, 25, 45, 0.6);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 107, 0, 0.1);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(255, 107, 0, 0.3);
+            border-color: rgba(255, 107, 0, 0.3);
+        }
+        
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 107, 0, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--primary);
+            font-size: 2rem;
+            border: 1px solid rgba(255, 107, 0, 0.3);
+            box-shadow: var(--price-glow);
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: white;
+        }
+        
+        .service-card p {
+            color: var(--gray);
+        }
+        /* Special Service - Cheap Ads */
+        
+        .special-service {
+            background: linear-gradient(135deg, rgba(10, 15, 31, 0.7) 0%, rgba(15, 25, 45, 0.9) 100%);
+            border: 1px solid rgba(255, 107, 0, 0.3);
+            box-shadow: var(--price-glow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .special-service::before {
+            content: 'STARTING AT';
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            background: linear-gradient(to right, var(--primary), #ff8c00);
+            color: white;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .price-tag {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin: 15px 0;
+            text-shadow: var(--price-glow);
+            font-weight: 700;
+        }
+        
+        .price-tag span {
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+        /* Coming Soon Badge */
+        
+        .coming-soon {
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            background: linear-gradient(to right, #ff6b00, #ff8c00);
+            color: white;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-size: 0.8rem;
+            font-weight: bold;
+            z-index: 2;
+        }
+        /* Store Section */
+        
+        .store {
+            padding: 100px 0;
+            background: linear-gradient(rgba(10, 15, 31, 0.7), rgba(10, 15, 31, 0.9));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .store::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 30%, rgba(255, 107, 0, 0.1) 0%, transparent 20%), radial-gradient(circle at 80% 70%, rgba(0, 200, 255, 0.1) 0%, transparent 20%);
+        }
+        
+        .store-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .store-text {
+            flex: 1;
+        }
+        
+        .store-text h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            text-shadow: 0 0 15px rgba(255, 107, 0, 0.4);
+        }
+        
+        .store-text p {
+            color: var(--gray);
+            margin-bottom: 25px;
+        }
+        
+        .store-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .store-logo-img {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            overflow: hidden;
+        }
+        
+        .store-logo-img img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .store-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .store-link {
+            display: inline-block;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            position: relative;
+        }
+        
+        .store-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+        
+        .store-link:hover::after {
+            width: 100%;
+        }
+        
+        .store-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .store-image img {
+            max-width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(255, 107, 0, 0.3);
+        }
+        /* Partners Section */
+        
+        .partners {
+            padding: 100px 0;
+            background: linear-gradient(rgba(10, 15, 31, 0.7), rgba(10, 15, 31, 0.9));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .partners::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 40%, rgba(255, 107, 0, 0.08) 0%, transparent 25%), radial-gradient(circle at 70% 60%, rgba(0, 200, 255, 0.08) 0%, transparent 25%);
+        }
+        
+        .partners-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .partners-text {
+            flex: 1;
+        }
+        
+        .partners-text h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            text-shadow: 0 0 15px rgba(255, 107, 0, 0.4);
+        }
+        
+        .partners-text p {
+            color: var(--gray);
+            margin-bottom: 25px;
+        }
+        
+        .benefits-list {
+            list-style: none;
+            margin: 25px 0;
+        }
+        
+        .benefits-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            gap: 15px;
+        }
+        
+        .benefit-icon {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-top: 4px;
+        }
+        
+        .partners-form {
+            background: rgba(15, 25, 45, 0.7);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 107, 0, 0.2);
+            backdrop-filter: blur(10px);
+            flex: 1;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 14px;
+            background: rgba(5, 10, 20, 0.7);
+            border: 1px solid rgba(255, 107, 0, 0.2);
+            border-radius: 10px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            color: white;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(0, 200, 255, 0.2);
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            margin-top: 10px;
+            box-shadow: var(--price-glow);
+            border: 2px solid var(--primary);
+        }
+        
+        .submit-btn:hover {
+            background: transparent;
+            color: var(--accent);
+            border-color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(0, 200, 255, 0.4);
+        }
+        /* Contact Section */
+        
+        .contact {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .contact-card {
+            background: rgba(15, 25, 45, 0.6);
+            padding: 30px;
+            border-radius: 20px;
+            display: flex;
+            gap: 20px;
+            border: 1px solid rgba(255, 107, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+        
+        .contact-card:hover {
+            border-color: rgba(255, 107, 0, 0.3);
+            transform: translateY(-5px);
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 107, 0, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            border: 1px solid rgba(255, 107, 0, 0.3);
+        }
+        
+        .contact-details h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+        
+        .contact-details p,
+        .contact-details a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .contact-details a:hover {
+            color: var(--accent);
+        }
+        
+        .whatsapp-link {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .whatsapp-link:hover {
+            color: #ff8c00;
+        }
+        /* Footer */
+        
+        footer {
+            background: var(--darker);
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255, 107, 0, 0.1);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            color: var(--accent);
+            position: relative;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--accent);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            color: var(--accent);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 200, 255, 0.2);
+        }
+        
+        .social-links a:hover {
+            background: rgba(0, 200, 255, 0.1);
+            transform: translateY(-3px);
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        /* Tron-inspired decorative elements */
+        
+        .tron-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(0, 200, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 200, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 0;
+            opacity: 0.3;
+        }
+        
+        .tron-line {
+            position: absolute;
+            background: linear-gradient(to right, transparent, var(--accent), transparent);
+            height: 1px;
+            width: 100%;
+            opacity: 0.3;
+        }
+        
+        .tron-line-1 {
+            top: 20%;
+        }
+        
+        .tron-line-2 {
+            top: 40%;
+        }
+        
+        .tron-line-3 {
+            top: 60%;
+        }
+        
+        .tron-line-4 {
+            top: 80%;
+        }
+        /* Responsive Design */
+        
+        @media (max-width: 992px) {
+            .hero-text h1 {
+                font-size: 3rem;
+            }
+            .store-content,
+            .partners-content {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                background: rgba(10, 15, 31, 0.95);
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                border-top: 1px solid rgba(255, 107, 0, 0.1);
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+                transition: var(--transition);
+            }
+            .nav-links.active {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+            .hero {
+                padding: 150px 0 80px;
+            }
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+            .btn-group {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+            .btn-secondary {
+                margin-left: 0;
+            }
+            .partners-form {
+                padding: 30px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            .store-text h2,
+            .partners-text h2 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <!-- Using the cube logo from your image -->
+                    <i class="fas fa-cube logo-icon"></i>
+                    <span>The Tron Forge</span> Limited
+                </a>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#store">Our Store</a></li>
+                    <li><a href="#partners">Become A Partner</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="tron-grid"></div>
+        <div class="tron-line tron-line-1"></div>
+        <div class="tron-line tron-line-2"></div>
+        <div class="tron-line tron-line-3"></div>
+        <div class="tron-line tron-line-4"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Affordable Advertising & E-commerce Solutions</h1>
+                    <p>The Tron Forge Limited provides budget-friendly advertising services and an innovative online store for everyone.</p>
+                    <div class="btn-group">
+                        <a href="#contact" class="btn btn-primary">Contact Us</a>
+                        <a href="#services" class="btn btn-secondary">Our Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>We provide affordable and effective solutions for your business and personal needs.</p>
+            </div>
+            <div class="services-grid">
+                <!-- Special Service - Cheap Ads -->
+                <div class="service-card special-service">
+                    <div class="service-icon">
+                        <i class="fas fa-ad"></i>
+                    </div>
+                    <h3>Cheap Rate Ads</h3>
+                    <p>Get your message seen with our affordable advertising solutions starting at just $5!</p>
+                    <div class="price-tag">$5<span>+</span></div>
+                    <a href="#contact" class="btn" style="margin-top: 20px;">Order Now</a>
+                </div>
+
+                <!-- Web Building Service with Coming Soon -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="coming-soon">COMING SOON</div>
+                    <h3>Web Building</h3>
+                    <p>Professional website creation services coming soon! Stay tuned for our launch.</p>
+                </div>
+
+                <!-- Coding Solutions with Coming Soon -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="coming-soon">COMING SOON</div>
+                    <h3>Coding Solutions</h3>
+                    <p>Custom software development and coding services coming soon! Contact us for early access.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Section -->
+    <section id="store" class="store">
+        <div class="container">
+            <div class="section-title">
+                <h2>The Tron Forge Limited Store</h2>
+                <p>Our online marketplace for everyone - browse our selection of products and services</p>
+            </div>
+            <div class="store-content">
+                <div class="store-text">
+                    <h2>Shop With Us</h2>
+                    <p>Welcome to The Tron Forge Limited Store - your one-stop online marketplace for a variety of products and services.</p>
+                    <p>Our store is designed for everyone, offering quality products at competitive prices with a seamless shopping experience.</p>
+                    <div class="store-logo">
+                        <div class="store-logo-img">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+CiAgICA8ZGVmcz4KICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQxIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmNmIwMCIvPgogICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMGM4ZmYiLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA4NSBMIDUwIDUwIEwgMTUgODUgTCAxNSAxNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAzNSAzNSBMIDUwIDUwIEwgNjUgMzUgTCA2NSA2NSBMIDUwIDUwIEwgMzUgNjUgTCAzNSAzNSIvPgogICAgPGFzY2VudCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgZGF0YT0ibSAxNSAxNSBMIDUwIDUwIEwgODUgMTUgTCA4NSA8L3N2Zz4="
+                                alt="The Tron Forge Limited Store Logo">
+                        </div>
+                        <div class="store-name">The Tron Forge Limited Store</div>
+                    </div>
+                    <p>Visit our webstore today:</p>
+                    <a href="https://thetronforge.unaux.com" target="_blank" class="store-link">thetronforge.unaux.com</a>
+                    <a href="https://thetronforge.unaux.com" target="_blank" class="btn btn-primary" style="margin-top: 20px;">Visit Our Store</a>
+                </div>
+                <div class="store-image">
+                    <img src="https://placehold.co/600x400/ff6b00/white?text=The+Tron+Forge+Store" alt="The Tron Forge Limited Store">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="partners">
+        <div class="container">
+            <div class="section-title">
+                <h2>Become A Partner</h2>
+                <p>Join our growing network of partners and grow your business with The Tron Forge Limited</p>
+            </div>
+            <div class="partners-content">
+                <div class="partners-text">
+                    <h2>Grow Together With Us</h2>
+                    <p>Partner with The Tron Forge Limited to expand your business reach, access exclusive resources, and benefit from our established platform.</p>
+
+                    <h3>Partner Benefits:</h3>
+                    <ul class="benefits-list">
+                        <li>
+                            <i class="fas fa-check-circle benefit-icon"></i>
+                            <span>Access to our affordable advertising platform at partner rates</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle benefit-icon"></i>
+                            <span>Promotion on our e-commerce marketplace</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle benefit-icon"></i>
+                            <span>Dedicated support and account management</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle benefit-icon"></i>
+                            <span>Co-marketing opportunities and brand exposure</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle benefit-icon"></i>
+                            <span>Early access to new features and services</span>
+                        </li>
+                    </ul>
+
+                    <p>Ready to grow your business with us? Fill out the application form and our partnership team will get back to you within 48 hours.</p>
+                </div>
+                <div class="partners-form">
+                    <form id="partnerForm">
+                        <div class="form-group">
+                            <label for="partner-name">Full Name</label>
+                            <input type="text" id="partner-name" class="form-control" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="partner-company">Company Name</label>
+                            <input type="text" id="partner-company" class="form-control" placeholder="Your company name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="partner-email">Email Address</label>
+                            <input type="email" id="partner-email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="partner-phone">WhatsApp Number</label>
+                            <input type="tel" id="partner-phone" class="form-control" placeholder="+1 (250) 255-6589" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="partner-type">Partnership Type</label>
+                            <select id="partner-type" class="form-control" required>
+                                <option value="">Select partnership type</option>
+                                <option value="advertising">Advertising Partner</option>
+                                <option value="ecommerce">E-commerce Seller</option>
+                                <option value="tech">Technology Partner</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="partner-message">Tell us about your business</label>
+                            <textarea id="partner-message" class="form-control" placeholder="Describe your business and why you want to partner with us..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit Application</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Have questions about our services or store? Get in touch with our team via WhatsApp.</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>WhatsApp</h3>
+                            <p><a href="https://wa.me/12502556589" class="whatsapp-link" target="_blank">+1 (250) 255-6589</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email Address</h3>
+                            <p><a href="mailto:info@thetronforge.name.ng">info@thetronforge.name.ng</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Working Hours</h3>
+                            <p>Monday - Friday: 9AM - 6PM<br>Saturday: 10AM - 4PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" placeholder="What is this regarding?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" placeholder="Tell us about your inquiry..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>The Tron Forge Limited</h3>
+                    <p>Providing affordable advertising solutions and an innovative online store for everyone.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#store">Our Store</a></li>
+                        <li><a href="#partners">Become A Partner</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Cheap Rate Ads</a></li>
+                        <li><a href="#">Web Building</a></li>
+                        <li><a href="#">Coding Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Store</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://thetronforge.unaux.com" target="_blank">Visit Our Webstore</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Special Offers</a></li>
+                        <li><a href="#">Customer Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 The Tron Forge Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+
+        // Form submission handling
+        const contactForm = document.getElementById('contactForm');
+        const partnerForm = document.getElementById('partnerForm');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // Simple validation
+            if (name && email && subject && message) {
+                alert('Thank you for your message! We will get back to you soon.');
+                contactForm.reset();
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+
+        partnerForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('partner-name').value;
+            const company = document.getElementById('partner-company').value;
+            const email = document.getElementById('partner-email').value;
+            const phone = document.getElementById('partner-phone').value;
+            const type = document.getElementById('partner-type').value;
+            const message = document.getElementById('partner-message').value;
+
+            // Simple validation
+            if (name && company && email && phone && type && message) {
+                alert('Thank you for your partnership application! Our team will contact you within 48 hours.');
+                partnerForm.reset();
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+
+        // Add animation on scroll for service cards
+        const serviceCards = document.querySelectorAll('.service-card');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        serviceCards.forEach(card => {
+            card.style.opacity = 0;
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+
+</html>
