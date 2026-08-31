@@ -1,0 +1,16 @@
+{
+  "name": "The Tron Forge Limited",
+  "short_name": "TTFL",
+  "description": "The Tron Forge Limited — We Forge The Future.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3355ff",
+  "icons": [
+    {
+      "src": "https://www.max-ai.name.ng/ttfl.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
