@@ -1,0 +1,1 @@
+export default function NotFound(){return <main style={{padding:"80px 24px",fontFamily:"Arial"}}><h1>Page not found</h1><p>The page you requested does not exist.</p><a href="/">Return to The Tron Forge Limited</a></main>}
