@@ -33,45 +33,107 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 
-<script type="application/ld+json">{
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "The Tron Forge Limited",
-  "alternateName": "TTFL",
-  "url": "https://www.thetronforge.name.ng/",
-  "logo": "https://www.max-ai.name.ng/ttfl.png",
-  "description": "The Tron Forge Limited is a technology company building digital products, AI systems, online platforms, and services, including the MAX AI Ecosystem and TTFL Store.",
-  "founder": {
-    "@type": "Person",
-    "name": "Zion Opaaje",
-    "alternateName": "MegaTron"
-  },
-  "sameAs": [
-    "https://thetronforge.simdif.com",
-    "https://www.max-ai.name.ng/",
-    "https://www.ttflstore.name.ng/",
-    "https://www.instagram.com/thetronforgelimitedig/",
-    "https://about.me/ZionOpaaje"
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://thetronforge.name.ng/#organization",
+      "name": "The Tron Forge Limited",
+      "legalName": "The Tron Forge Limited",
+      "alternateName": "TTFL",
+      "url": "https://thetronforge.name.ng/",
+      "logo": "https://www.max-ai.name.ng/ttfl.png",
+      "description": "The Tron Forge Limited is a Nigeria-based technology company that builds digital products, AI systems, online platforms, digital infrastructure, and technology services for people, businesses, and creators.",
+      "foundingDate": "2024-08-01",
+      "founder": {
+        "@id": "https://zionopaaje.name.ng/#person"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "general inquiries",
+        "email": "info@thetronforge.name.ng",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://thetronforge.name.ng/",
+        "https://thetronforge.simdif.com/",
+        "https://www.instagram.com/thetronforgelimitedig/",
+        "https://x.com/TheTronForgeLTD"
+      ],
+      "subOrganization": [
+        {
+          "@id": "https://max-ai.name.ng/#organization"
+        },
+        {
+          "@id": "https://ttflstore.name.ng/#organization"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://zionopaaje.name.ng/#person",
+      "name": "Zion Opaaje",
+      "alternateName": "MegaTron",
+      "url": "https://zionopaaje.name.ng/",
+      "sameAs": [
+        "https://about.me/ZionOpaaje",
+        "https://ng.linkedin.com/in/zion-opaaje-302561356"
+      ],
+      "founder": {
+        "@id": "https://thetronforge.name.ng/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://max-ai.name.ng/#organization",
+      "name": "The MAX AI Ecosystem",
+      "alternateName": "MAX AI",
+      "url": "https://max-ai.name.ng/",
+      "parentOrganization": {
+        "@id": "https://thetronforge.name.ng/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://ttflstore.name.ng/#organization",
+      "name": "TTFL Store",
+      "url": "https://ttflstore.name.ng/",
+      "parentOrganization": {
+        "@id": "https://thetronforge.name.ng/#organization"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://thetronforge.name.ng/#website",
+      "name": "The Tron Forge Limited",
+      "url": "https://thetronforge.name.ng/",
+      "publisher": {
+        "@id": "https://thetronforge.name.ng/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://thetronforge.name.ng/#webpage",
+      "url": "https://thetronforge.name.ng/",
+      "name": "The Tron Forge Limited | We Forge The Future",
+      "description": "Official website of The Tron Forge Limited, a technology company building digital products, AI systems, online platforms, and technology services.",
+      "isPartOf": {
+        "@id": "https://thetronforge.name.ng/#website"
+      },
+      "about": {
+        "@id": "https://thetronforge.name.ng/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://thetronforge.name.ng/#organization"
+      },
+      "inLanguage": "en"
+    }
   ]
-}</script>
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "The Tron Forge Limited",
-  "url": "https://www.thetronforge.name.ng/"
-}</script>
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "The Tron Forge Limited \u2014 Home",
-  "description": "Homepage of The Tron Forge Limited, a technology company building the MAX AI Ecosystem and TTFL Store.",
-  "url": "https://www.thetronforge.name.ng/index.html",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "The Tron Forge Limited",
-    "url": "https://www.thetronforge.name.ng/"
-  }
-}</script>
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
