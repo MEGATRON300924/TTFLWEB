@@ -1,3 +1,3 @@
 import type { NextConfig } from "next";
-const nextConfig: NextConfig = { images:{remotePatterns:[{protocol:"https",hostname:"max-ai.name.ng"},{protocol:"https",hostname:"www.max-ai.name.ng"},{protocol:"https",hostname:"commons.wikimedia.org"}]} };
+const nextConfig: NextConfig = { async redirects(){ const pages=["about","ecosystem","services","ventures","founder","about-me","gallery","media","partnerships","contact","privacy","terms"]; return [...pages.map(page=>({source:`/${page}.html`,destination:`/${page}`,permanent:true})),{source:"/index.html",destination:"/",permanent:true}]; }, images:{remotePatterns:[{protocol:"https",hostname:"max-ai.name.ng"},{protocol:"https",hostname:"www.max-ai.name.ng"},{protocol:"https",hostname:"commons.wikimedia.org"}]} };
 export default nextConfig;
