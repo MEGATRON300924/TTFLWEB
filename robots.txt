@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.thetronforge.name.ng/sitemap.xml
+Sitemap: https://thetronforge.name.ng/sitemap.xml
