@@ -1,7 +1,6 @@
 "use client";
 
 import { FormEvent, useMemo, useState } from "react";
-import type { Metadata } from "next";
 
 const WHATSAPP_NUMBER = "12502556589";
 
@@ -47,6 +46,7 @@ export default function WebsitePlanSuccessfulPage() {
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setError("");
+    setWhatsAppUrl(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`);
     setSending(true);
     try {
       const response = await fetch("/api/website-plan-application", {
@@ -132,7 +132,7 @@ export default function WebsitePlanSuccessfulPage() {
                 What would you like your website to include? <span className="website-plan-optional">(optional)</span>
                 <textarea rows={4} maxLength={3000} value={form.details} onChange={e => update("details", e.target.value)} placeholder="Tell us about your business, preferred colours, pages, features, or anything else we should know." />
               </label>
-              {error ? <p className="website-plan-error" role="alert">{error}</p> : null}
+              {error ? <div><p className="website-plan-error" role="alert">{error}</p>{whatsAppUrl ? <a className="website-plan-submit website-plan-whatsapp" href={whatsAppUrl} target="_blank" rel="noopener noreferrer">Send application on WhatsApp ↗</a> : null}</div> : null}
               <button className="website-plan-submit" type="submit" disabled={sending}>
                 {sending ? "Sending application…" : "Submit website application"}
               </button>
