@@ -2,16 +2,71 @@ import type { Metadata } from "next";
 import LegacyPage from "../../components/LegacyPage";
 
 export const metadata: Metadata = {
-  title: "Services | The Tron Forge Limited",
+  metadataBase: new URL("https://thetronforge.name.ng"),
+  title: "Website Design & Digital Services in Nigeria | TTFL",
   description:
-    "Explore website development, domain registration, Google search setup, creative media, advertising, and technology services from The Tron Forge Limited.",
-  alternates: { canonical: "/services" },
+    "Get a professional business website, domain registration assistance and Google Search setup for ₦20,000 per year. Explore web development, branding, advertising and digital services from The Tron Forge Limited.",
+  applicationName: "The Tron Forge Limited",
+  authors: [{ name: "The Tron Forge Limited", url: "https://thetronforge.name.ng" }],
+  creator: "The Tron Forge Limited",
+  publisher: "The Tron Forge Limited",
+  category: "Technology",
+  keywords: [
+    "The Tron Forge Limited",
+    "TTFL services",
+    "website design Nigeria",
+    "website development Nigeria",
+    "affordable website design Nigeria",
+    "business website Nigeria",
+    "₦20,000 website package",
+    "domain registration Nigeria",
+    "Google Search setup",
+    "Google website indexing",
+    "professional website for small business",
+    "web development",
+    "app development",
+    "graphic design",
+    "digital marketing",
+    "advertising and promotion",
+    "creative media design",
+  ],
+  alternates: {
+    canonical: "https://thetronforge.name.ng/services",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
-    title: "Services | The Tron Forge Limited",
+    title: "Professional Website Design in Nigeria from ₦20,000 | TTFL",
     description:
-      "Professional websites, domains, Google search setup, creative media, and technology services for businesses and creators.",
+      "Launch your business online with a professional website, domain registration assistance and Google Search setup. Website packages from ₦20,000 per year.",
     url: "https://thetronforge.name.ng/services",
+    siteName: "The Tron Forge Limited",
+    locale: "en_NG",
     type: "website",
+    images: [
+      {
+        url: "https://www.max-ai.name.ng/ttfl.png",
+        width: 1200,
+        height: 630,
+        alt: "The Tron Forge Limited — Website Design and Digital Services",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Professional Website Design in Nigeria | The Tron Forge Limited",
+    description:
+      "Get a professional website, domain assistance and Google Search setup for ₦20,000 per year.",
+    images: ["https://www.max-ai.name.ng/ttfl.png"],
   },
 };
 
