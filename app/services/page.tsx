@@ -136,7 +136,7 @@ const page = `
           <h3 style="font-size:42px;letter-spacing:-.04em;margin:8px 0 2px;color:var(--ink)">₦20,000</h3>
           <p style="font-weight:600;color:var(--ink);margin-bottom:18px">per year</p>
           <p>One affordable annual package to help establish your online presence. Contact us with your business name and what you need your website to do, and we will guide you through the next steps.</p>
-          <a href="mailto:info@thetronforge.name.ng?subject=Website%20Development%20Enquiry" class="btn btn-filled">Request a website</a>
+          <a href="https://paystack.shop/pay/ttfl-website-plan" class="btn btn-filled">Request a website</a>
           <p style="font-size:12px;margin:14px 0 0">Google indexing helps your site become discoverable; search ranking and visibility are not guaranteed.</p>
         </div>
       </div>
