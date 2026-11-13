@@ -13,8 +13,9 @@ Refresh the existing founder profile and make it available at the clean `/founde
 - [x] Inspected the existing `founder.html`, stylesheet, navigation, and sitemap.
 - [x] Replaced the outdated founder biography and legacy About.me references with the current profile, official links, and the three milestone dates.
 - [x] Added the portrait and Person/Organization/ProfilePage structured data, including TTFL's founding date.
-- [x] Added the clean `/founder` rewrite and updated the sitemap canonical URL.
-- [x] Verified source files, canonical URL, milestone text, portrait, sitemap entry, and rewrite.
+- [x] Added the clean `/founder` rewrite, updated the sitemap, and changed the homepage navigation to use the clean route.
+- [x] Corrected the homepage Organization founding date from the old value to 1 September 2024 and refreshed Person image/sameAs data.
+- [x] Verified source files, canonical URL, milestone text, portrait, sitemap entry, rewrite, and homepage schema.
 
 ## Commits
 - Initial plan: `bda0c9dab4e66b4820b445edd274802d43d7d45f`
@@ -22,11 +23,13 @@ Refresh the existing founder profile and make it available at the clean `/founde
 - Sitemap: `19453f5e9b10728d35aa27ae3511c79d219f3501`
 - Clean route rewrite: `80b1dc251c78be2ec4003489144cad4adbe7c9e0`
 - Structured data correction: `a5b248e5c12e5d7fc9b1076b6734faabd984af94`
+- Homepage founding date and founder link: `47a8b557609690e403cae195a40e755c134b5cb1`
+- Homepage Person image and sameAs: `f6e6bc1f502b61c4f4af1d974ce0535a706a9aea`
 
 ## Tests and deployment
 - Source-level verification: passed.
 - HTML/JSON-LD runtime validation: not run in this session.
-- Vercel production deployment for the latest commit: QUEUED at last check. The earlier clean-route deployment reached READY, but the latest structured-data correction still needs deployment verification.
+- Vercel production deployment: latest source commit awaits build verification.
 
 ## Next steps
-- Recheck the Vercel build and verify `https://thetronforge.name.ng/founder` returns HTTP 200 with the expected content and canonical metadata.
+- Verify `https://thetronforge.name.ng/founder` returns HTTP 200 and inspect its canonical metadata after deployment.
