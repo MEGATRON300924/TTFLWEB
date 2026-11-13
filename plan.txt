@@ -7,17 +7,26 @@ Refresh the existing founder profile and make it available at the clean `/founde
 - The Tron Forge Limited was founded on 1 September 2024.
 - TTFL Store launched on 1 September 2025.
 - Production of The MAX AI Ecosystem began in December 2025.
-- Founder portrait source: `https://zionopaaje.name.ng/zionopaaje.png` (from the `zionopaaje` repository's `public/zionopaaje.png`).
+- Founder portrait: `https://zionopaaje.name.ng/zionopaaje.png`, sourced from `MEGATRON300924/zionopaaje/public/zionopaaje.png`.
 
-## Progress
+## Implementation
 - [x] Inspected the existing `founder.html`, stylesheet, navigation, and sitemap.
-- [ ] Replace outdated biography and links; add the three milestone dates and current official profile links.
-- [ ] Add a clean `/founder` rewrite and update the sitemap canonical URL.
-- [ ] Update this plan with commit references and verification results.
+- [x] Replaced the outdated founder biography and legacy About.me references with the current profile, official links, and the three milestone dates.
+- [x] Added the portrait and Person/Organization/ProfilePage structured data, including TTFL's founding date.
+- [x] Added the clean `/founder` rewrite and updated the sitemap canonical URL.
+- [x] Verified source files, canonical URL, milestone text, portrait, sitemap entry, and rewrite.
+
+## Commits
+- Initial plan: `bda0c9dab4e66b4820b445edd274802d43d7d45f`
+- Founder profile: `487c57579b9db182bdc165d01dc16383cf47e285`
+- Sitemap: `19453f5e9b10728d35aa27ae3511c79d219f3501`
+- Clean route rewrite: `80b1dc251c78be2ec4003489144cad4adbe7c9e0`
+- Structured data correction: `a5b248e5c12e5d7fc9b1076b6734faabd984af94`
 
 ## Tests and deployment
-- Build/test status: pending.
-- Production route status: pending.
+- Source-level verification: passed.
+- HTML/JSON-LD runtime validation: not run in this session.
+- Vercel production deployment for the latest commit: QUEUED at last check. The earlier clean-route deployment reached READY, but the latest structured-data correction still needs deployment verification.
 
 ## Next steps
-- Verify `https://thetronforge.name.ng/founder` and its canonical metadata after deployment.
+- Recheck the Vercel build and verify `https://thetronforge.name.ng/founder` returns HTTP 200 with the expected content and canonical metadata.
