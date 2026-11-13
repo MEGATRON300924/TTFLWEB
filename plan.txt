@@ -1,0 +1,23 @@
+# Founder Page Implementation Plan
+
+## Request
+Refresh the existing founder profile and make it available at the clean `/founder` route.
+
+## Confirmed facts
+- The Tron Forge Limited was founded on 1 September 2024.
+- TTFL Store launched on 1 September 2025.
+- Production of The MAX AI Ecosystem began in December 2025.
+- Founder portrait source: `https://zionopaaje.name.ng/zionopaaje.png` (from the `zionopaaje` repository's `public/zionopaaje.png`).
+
+## Progress
+- [x] Inspected the existing `founder.html`, stylesheet, navigation, and sitemap.
+- [ ] Replace outdated biography and links; add the three milestone dates and current official profile links.
+- [ ] Add a clean `/founder` rewrite and update the sitemap canonical URL.
+- [ ] Update this plan with commit references and verification results.
+
+## Tests and deployment
+- Build/test status: pending.
+- Production route status: pending.
+
+## Next steps
+- Verify `https://thetronforge.name.ng/founder` and its canonical metadata after deployment.
