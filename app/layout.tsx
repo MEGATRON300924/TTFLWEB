@@ -11,17 +11,17 @@ export const metadata: Metadata = {
     "The Tron Forge Limited is a Nigeria-based technology company building digital products, AI systems, online platforms, and technology services.",
   alternates: { canonical: "/" },
   icons: {
-    icon: "https://www.max-ai.name.ng/ttfl.png",
-    apple: "https://www.max-ai.name.ng/ttfl.png",
+    icon: "/assets/ttfl.jpg",
+    apple: "/assets/ttfl.jpg",
   },
   openGraph: {
     siteName: "The Tron Forge Limited",
     type: "website",
-    images: [{ url: "https://www.max-ai.name.ng/ttfl.png" }],
+    images: [{ url: "/assets/ttfl.jpg" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://www.max-ai.name.ng/ttfl.png"],
+    images: ["/assets/ttfl.jpg"],
   },
 };
 
