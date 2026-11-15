@@ -76,3 +76,34 @@ Update the homepage title, meta description, Open Graph identity, and existing S
 
 ### Deployment blocker update (2026-11-13)
 - Vercel deployment check: latest observed deployment `dpl_jzjXc3dBzJMMBHRtRKhsYPi2oAoX` was BUILDING for commit `cedd00c9340a0c566da0532d01162c7839f89183`; it does not include the later final plan commit `5c173c235e2bbd328890669ef838f653711c7bee`. A manual production deployment attempt was blocked by Vercel HTTP 402 `api-deployments-free-per-day` (retry after 24 hours). Live deployment of the final source state is not confirmed.
+
+ 
+## Current task: Full TTFL website visual redesign (2026-11-15)
+
+### Request
+Redesign the full The Tron Forge Limited public website with a distinctive developer-focused identity, primarily black, white and neutral greys. Remove generic AI-template styling and make the company presentation feel authored, technical and recognisable.
+
+### Design decisions
+- Editorial engineering direction: oversized typography, technical micro-labels, ruled layouts, monochrome surfaces, custom system-diagram artwork and sharp rectangular controls.
+- Restrained acid-lime detail only in the homepage diagram/navigation accents; core palette remains black, white and neutral grey.
+- Avoid stock imagery, generic AI gradients, glowing orbs, glassmorphism, excessive rounded cards and generic AI marketing copy.
+- Preserve existing public routes, metadata/schema, MAX Auth inquiry forms, API routes and product links.
+
+### Implementation
+- [x] Audited the Next.js app, legacy page renderer, homepage, shared styles and form/API routes.
+- [x] Built a bespoke responsive homepage with technical diagram, portfolio, capabilities, founder section and contact CTA.
+- [x] Replaced Next.js and static-site stylesheets with a shared monochrome design system for all public routes.
+- [ ] Run production build and route/form smoke checks.
+- [ ] Review desktop and mobile rendering.
+- [ ] Record final commit, PR and deployment status.
+
+### Changed files
+- `app/page.tsx`
+- `components/TTFLHome.tsx` (new)
+- `app/globals.css`
+- `css/styles.css`
+- `plan.txt`
+
+### Verification / deployment
+- Build/runtime verification pending.
+- No production deployment triggered during redesign work.
