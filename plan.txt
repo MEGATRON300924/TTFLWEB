@@ -149,3 +149,5 @@ Redesign the full The Tron Forge Limited public website with a distinctive devel
 
 - Final code preview after the founder-name correction is READY: https://ttflweb-jgr5ok51a-the-tron-forge-limited.vercel.app (commit `3cbfee9c89f732fffbd07fcaf45261bca1bd3176`).
 - A subsequent documentation-only commit records the preview and verification state; the code in the READY preview matches the PR's final application changes.
+
+- [x] Applied the same full company name and local logo to the dedicated Contact and Partnerships page headers, in addition to the shared homepage/About header and legacy content-page headers.
