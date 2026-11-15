@@ -140,3 +140,9 @@ Redesign the full The Tron Forge Limited public website with a distinctive devel
 - [x] Rebuilt the About page with expanded company overview, mission, six values, founder/story section, Nigeria/global positioning and venture links.
 - [x] Introduced a more expressive colour system using coral, cobalt, violet, teal, warm yellow and cream while preserving accessible contrast and responsive layouts.
 - [ ] Run production build, TypeScript and responsive browser QA before merging.
+
+- Preview build: READY on Vercel — https://ttflweb-3nm4e95nj-the-tron-forge-limited.vercel.app
+- Build verification: Next.js 16.3.8 compiled successfully, TypeScript passed, and all 20 static pages generated. The new `/about` route is present.
+- Browser-level visual QA remains pending because the preview URL could not be loaded by the inspection client; user review is requested before merge.
+- Pull request: https://github.com/MEGATRON300924/TTFLWEB/pull/2 (open; not merged).
+- Current preview build used commit `7529bb9cfc93d3870a15036ec6e300d5fa289517`; a small founder-name correction was committed afterward and will be rebuilt before review.
