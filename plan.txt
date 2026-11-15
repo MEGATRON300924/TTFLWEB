@@ -146,3 +146,6 @@ Redesign the full The Tron Forge Limited public website with a distinctive devel
 - Browser-level visual QA remains pending because the preview URL could not be loaded by the inspection client; user review is requested before merge.
 - Pull request: https://github.com/MEGATRON300924/TTFLWEB/pull/2 (open; not merged).
 - Current preview build used commit `7529bb9cfc93d3870a15036ec6e300d5fa289517`; a small founder-name correction was committed afterward and will be rebuilt before review.
+
+- Final code preview after the founder-name correction is READY: https://ttflweb-jgr5ok51a-the-tron-forge-limited.vercel.app (commit `3cbfee9c89f732fffbd07fcaf45261bca1bd3176`).
+- A subsequent documentation-only commit records the preview and verification state; the code in the READY preview matches the PR's final application changes.
