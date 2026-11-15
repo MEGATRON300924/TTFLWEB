@@ -129,3 +129,14 @@ Redesign the full The Tron Forge Limited public website with a distinctive devel
 - Direct HTTP/browser inspection is unavailable in this execution environment; therefore do not mark visual or end-to-end form testing as passed.
 - Form route source review confirms unauthenticated POST is rejected with HTTP 401 before email delivery; authenticated delivery requires configured Resend credentials and validated contact/partnership fields.
 - No live form submission or external email was triggered.
+
+ 
+### Brand and company-page refresh — 2026-11-15
+- [x] Added the official TTFL logo to `public/assets/ttfl.jpg`, sourced from the company's own current founder-site asset.
+- [x] Added the existing full-colour MAX AI and TTFL Store logo files to `public/assets/`; no grayscale CSS is applied to the MAX AI logo.
+- [x] Replaced the homepage's monochrome architecture sketch with a company identity panel using the TTFL logo and a structured company-details table.
+- [x] Removed the requested homepage labels: company-profile/building-since strip, FIG. 001/CONNECTED BY DESIGN drawing captions, the design/engineering footer label and the numbered capability/company labels.
+- [x] Updated the shared header and footer to show the full legal-facing name, The Tron Forge Limited, with the local logo asset.
+- [x] Rebuilt the About page with expanded company overview, mission, six values, founder/story section, Nigeria/global positioning and venture links.
+- [x] Introduced a more expressive colour system using coral, cobalt, violet, teal, warm yellow and cream while preserving accessible contrast and responsive layouts.
+- [ ] Run production build, TypeScript and responsive browser QA before merging.
