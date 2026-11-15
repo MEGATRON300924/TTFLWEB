@@ -93,9 +93,9 @@ Redesign the full The Tron Forge Limited public website with a distinctive devel
 - [x] Audited the Next.js app, legacy page renderer, homepage, shared styles and form/API routes.
 - [x] Built a bespoke responsive homepage with technical diagram, portfolio, capabilities, founder section and contact CTA.
 - [x] Replaced Next.js and static-site stylesheets with a shared monochrome design system for all public routes.
-- [ ] Run production build and route/form smoke checks.
+- [x] Vercel production build passed: Next.js compiled, TypeScript passed, and all 20 static pages generated; API routes were included in the route manifest.
 - [ ] Review desktop and mobile rendering.
-- [ ] Record final commit, PR and deployment status.
+- [x] Recorded commit, PR and preview deployment status.
 
 ### Changed files
 - `app/page.tsx`
@@ -105,5 +105,13 @@ Redesign the full The Tron Forge Limited public website with a distinctive devel
 - `plan.txt`
 
 ### Verification / deployment
-- Build/runtime verification pending.
-- No production deployment triggered during redesign work.
+- Vercel preview deployment: `dpl_G9XVWSyTAxWSJFEKRkiYwV4nRizt` — READY.
+- Preview URL: `https://ttflweb-c5swgg3rs-the-tron-forge-limited.vercel.app`.
+- Build: Next.js 16.3.8 compiled successfully; TypeScript passed; all 20 static pages generated; API routes were included.
+- One non-blocking npm warning remains: unknown `cache-dir` environment configuration.
+- Browser-level visual and form submission smoke tests were not completed in this session; web preview fetch was inaccessible to the inspection client.
+- No production deployment or domain assignment was triggered.
+
+### Final source records
+- Commit: `0761b971fd355ee7b7cac9660bb75d09b1fc2218`.
+- Pull request: `https://github.com/MEGATRON300924/TTFLWEB/pull/1` (open; not merged).
