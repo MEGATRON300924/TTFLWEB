@@ -115,3 +115,17 @@ Redesign the full The Tron Forge Limited public website with a distinctive devel
 ### Final source records
 - Commit: `0761b971fd355ee7b7cac9660bb75d09b1fc2218`.
 - Pull request: `https://github.com/MEGATRON300924/TTFLWEB/pull/1` (open; not merged).
+
+ 
+### QA follow-up — post-merge production review (2026-11-15)
+- PR #1 was merged into `main`; merge commit: `aa3092877171476c96d873557f9f2922c1f678ff`.
+- Vercel production deployment `dpl_AczJZZWaJTGdAxtQbv3ea6tFb1kw` reached READY and assigned both `thetronforge.name.ng` and `www.thetronforge.name.ng`.
+- Production build logs confirm successful Next.js compilation, TypeScript, 20/20 static pages, and all API routes.
+- Runtime error/fatal log query for the first 30 minutes after deployment returned no records.
+- QA source review identified that the first redesign stylesheet omitted several structural display rules used by legacy content pages (grid/flex layouts and menu control foundations). Added a follow-up CSS correction to both `app/globals.css` and `css/styles.css` while retaining the monochrome visual direction.
+- [x] Restored layout foundations for legacy hero, card grids, venture/founder cards, module/contact/gallery/footer grids, breadcrumbs, buttons, and responsive navigation.
+- [ ] Confirm follow-up production build and perform live browser review at desktop and mobile widths.
+- [ ] Verify MAX Auth sign-in redirect and contact/partnership submission end-to-end. Form submission was not attempted because it would send a real enquiry email.
+- Direct HTTP/browser inspection is unavailable in this execution environment; therefore do not mark visual or end-to-end form testing as passed.
+- Form route source review confirms unauthenticated POST is rejected with HTTP 401 before email delivery; authenticated delivery requires configured Resend credentials and validated contact/partnership fields.
+- No live form submission or external email was triggered.
