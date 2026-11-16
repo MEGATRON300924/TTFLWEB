@@ -177,3 +177,43 @@ Redesign the full The Tron Forge Limited public website with a distinctive devel
 
 ### QA
 - Browser-level visual inspection remains required; build success alone does not establish visual acceptance.
+
+
+## Site-wide Google / Apple-inspired redesign follow-up — 2026-11-16
+
+### User feedback and scope
+- User correctly identified that the Services page had been left on the older layout.
+- Apply the refreshed homepage visual language consistently across all public pages, not only Home and About.
+- Remove numbered section labels and numeric list markers from the homepage.
+
+### Implementation
+- [x] Removed numeric section labels from Home (Who we are, Our ventures, What we do, Founder, Work with us).
+- [x] Removed numbered capability markers from the homepage capability list.
+- [x] Updated the static `index.html` homepage to match the Next.js homepage composition and shared visual language.
+- [x] Rebuilt the Services route using the new spacious, product-led layout while retaining the website package, ₦20,000 annual price, Paystack link, service descriptions, enquiry form, metadata and structured data.
+- [x] Updated Contact and Partnerships pages to use the shared TTFL header/footer and refreshed page layouts; retained MAX Auth enquiry forms and their existing return paths.
+- [x] Added shared styling for the legacy-rendered pages (including Ventures, Ecosystem, Founder, Gallery, Privacy and Terms) so their navigation, headings, content grids, cards, forms and footer use the same design system.
+- [x] Added responsive layouts for desktop, tablet and mobile breakpoints.
+- [x] Updated `LegacyPage` wrapper to apply the shared site-wide styling without changing its interactive gallery and navigation behaviour.
+
+### Changed files
+- `index.html`
+- `components/TTFLHome.tsx`
+- `components/LegacyPage.tsx`
+- `app/services/page.tsx`
+- `app/contact/page.tsx`
+- `app/partnerships/page.tsx`
+- `app/globals.css`
+- `css/styles.css`
+- `plan.txt`
+
+### Status and verification
+- Source changes committed to `redesign/ttfl-brand-and-about`.
+- Build and TypeScript verification: pending Vercel preview build.
+- Browser-level desktop/mobile visual review: pending.
+- MAX Auth form submission was not triggered; the form routes and existing authentication flow were preserved.
+- No production deployment or merge was performed.
+
+### Next steps
+- Confirm the new preview deployment reaches READY and inspect the homepage, Services, About, Contact, Partnerships, and legacy-rendered routes at desktop and mobile widths.
+- Fix any build or visual regressions before requesting approval to merge.
