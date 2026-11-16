@@ -217,3 +217,14 @@ Redesign the full The Tron Forge Limited public website with a distinctive devel
 ### Next steps
 - Confirm the new preview deployment reaches READY and inspect the homepage, Services, About, Contact, Partnerships, and legacy-rendered routes at desktop and mobile widths.
 - Fix any build or visual regressions before requesting approval to merge.
+
+
+### Preview build and pull request follow-up — 2026-11-16
+- Vercel preview deployment for commit `de64f5afb9b07e66ec8f8f5115834d281b2545cb` reached READY.
+- Deployment: `dpl_EppNQTMEZ8Q2XfpFkMifKEVgyHog`.
+- Preview URL: https://ttflweb-mxpl5lnrx-the-tron-forge-limited.vercel.app
+- Framework: Next.js.
+- The earlier PR #3 was merged into `main` before this follow-up work. The site-wide changes are therefore tracked in a separate PR.
+- Pull request #4: https://github.com/MEGATRON300924/TTFLWEB/pull/4 (open; not merged).
+- The plan update itself is a documentation-only follow-up and will trigger another preview build.
+- Build reached READY, but visual QA in a real browser at desktop and mobile widths remains outstanding; do not describe visual QA as passed.
