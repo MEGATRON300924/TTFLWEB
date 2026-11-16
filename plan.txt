@@ -154,3 +154,26 @@ Redesign the full The Tron Forge Limited public website with a distinctive devel
 
 - Final all-header build is READY: https://ttflweb-mo1gnt85r-the-tron-forge-limited.vercel.app (commit `3008b5b40ad1f11b8b0ddd1f174f78a14d60efc2`).
 - Final build again passed Next.js compilation, TypeScript and static generation; Contact and Partnerships were included in this build with the local logo and full company name.
+
+
+## Google / Apple-inspired visual redesign — 2026-11-15
+
+### Feedback
+- Previous brand refresh still looked AI-generated. User requested a Google/Apple-inspired direction.
+
+### Design direction
+- Product-first corporate website: restrained blue accent, generous whitespace, clean typography, neutral surfaces and clear navigation.
+- Editorial hierarchy and confident product presentation without copying either company's layouts or identity.
+- Remove decorative technical labels, fake diagrams, stickers, repetitive card grids and generic promotional slogans.
+- Keep TTFL identity, venture logos, founder portrait, routes, contact paths and metadata.
+
+### Implementation
+- [x] Replaced homepage composition with company introduction, venture portfolio, capability list, founder section and direct contact panel.
+- [x] Rebuilt About page as a concise company profile with mission, principles, story and venture links.
+- [x] Added responsive product-led styling to Next.js and legacy stylesheet entry points.
+- [ ] Run build and responsive browser review.
+- [ ] Record preview deployment URL, build status and commit.
+- [ ] User visual review before merge; do not merge without explicit approval.
+
+### QA
+- Browser-level visual inspection remains required; build success alone does not establish visual acceptance.
