@@ -1,9 +1,21 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import TTFLHeader from "../../components/TTFLHeader";
+import TTFLFooter from "../../components/TTFLFooter";
 import AuthenticatedInquiryForm from "../../components/AuthenticatedInquiryForm";
 
 export const metadata: Metadata = { title: "Partnerships", description: "Explore technology, business, sponsorship, and product partnerships with The Tron Forge Limited." };
 
+const partnershipTypes = [
+  ["Technology partnerships","Integrations, product connectivity and technical collaboration."],
+  ["Business partnerships","Strategic initiatives and long-term business collaboration."],
+  ["Sponsorships and media","Events, campaigns, advertising and creator partnerships."],
+  ["Product collaborations","Co-building and co-launching products, features and services."]
+];
+
 export default function PartnershipsPage() {
-  return <main><header className="site-header"><div className="wrap nav"><Link href="/" className="brand"><div className="venture-logo"><img src="/assets/ttfl.jpg" alt="The Tron Forge Limited" /></div><span>The Tron Forge Limited</span></Link><nav className="primary-nav" aria-label="Primary"><ul><li><Link href="/">Home</Link></li><li><Link href="/about">About</Link></li><li><Link href="/ecosystem">Ecosystem</Link></li><li><Link href="/partnerships" aria-current="page">Partnerships</Link></li><li><Link href="/contact">Contact</Link></li></ul></nav><div className="nav-actions"><Link href="/contact" className="btn nav-cta desktop-only">Contact TTFL</Link></div></div></header><nav className="breadcrumb wrap" aria-label="Breadcrumb"><ol><li><Link href="/">Home</Link></li><li aria-current="page">Partnerships</li></ol></nav><section className="page-title"><div className="wrap"><h1>Partnerships</h1><p className="lede">Let’s build something meaningful together. Tell us about your organization and the opportunity you have in mind.</p></div></section><section><div className="wrap"><div className="grid-2"><div className="tile"><h3>Technology partnerships</h3><p>Integrations, product connectivity, and technical collaboration.</p></div><div className="tile"><h3>Business partnerships</h3><p>Strategic initiatives and long-term business collaboration.</p></div><div className="tile"><h3>Sponsorships and media</h3><p>Events, campaigns, advertising, and creator partnerships.</p></div><div className="tile"><h3>Product collaborations</h3><p>Co-building and co-launching products, features, and services.</p></div></div></div></section><AuthenticatedInquiryForm type="partnership" returnPath="/partnerships#partnership-form"/><footer className="site-footer"><div className="wrap"><div className="footer-bottom"><span>© 2026 The Tron Forge Limited. We Forge The Future.</span><span><Link href="/privacy">Privacy Policy</Link> · <Link href="/terms">Terms of Service</Link></span></div></div></footer></main>;
+  return <div className="refresh-page"><TTFLHeader/><main>
+    <section className="refresh-page-hero"><div className="refresh-shell"><p className="refresh-overline">The Tron Forge Limited <span>·</span> Partnerships</p><h1>Better work happens<br/><span>together.</span></h1><p className="refresh-page-lede">We work with businesses, organisations, creators and technology teams on ideas that benefit from shared expertise and clear execution.</p><div className="refresh-page-actions"><a className="refresh-primary" href="#partnership-form">Discuss a partnership <span>↓</span></a></div></div></section>
+    <section className="refresh-contact-options"><div className="refresh-shell"><div className="refresh-service-heading"><p className="refresh-kicker">Ways to collaborate</p><h2>Different goals.<br/>A shared approach.</h2></div><div className="refresh-contact-grid">{partnershipTypes.map(([title,desc])=><article key={title}><h3>{title}</h3><p>{desc}</p></article>)}</div></div></section>
+    <AuthenticatedInquiryForm type="partnership" returnPath="/partnerships#partnership-form"/>
+  </main><TTFLFooter/></div>;
 }

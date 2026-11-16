@@ -1,9 +1,21 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import TTFLHeader from "../../components/TTFLHeader";
+import TTFLFooter from "../../components/TTFLFooter";
 import AuthenticatedInquiryForm from "../../components/AuthenticatedInquiryForm";
 
 export const metadata: Metadata = { title: "Contact", description: "Contact The Tron Forge Limited for general enquiries, MAX AI, and TTFL Store." };
 
+const contacts = [
+  ["General enquiries","Questions about The Tron Forge Limited and our technology projects.","info@thetronforge.name.ng","mailto:info@thetronforge.name.ng"],
+  ["MAX AI partnerships","Integrations, collaborations, media, and MAX AI opportunities.","partners@max-ai.name.ng","mailto:partners@max-ai.name.ng"],
+  ["MAX AI support","Help with MAX AI products and services.","help@max-ai.name.ng","mailto:help@max-ai.name.ng"],
+  ["TTFL Store support","Marketplace orders, vendors, and account support.","TTFL Store Help Center","https://www.ttflstore.name.ng/support"]
+];
+
 export default function ContactPage() {
-  return <main><header className="site-header"><div className="wrap nav"><Link href="/" className="brand"><div className="venture-logo"><img src="/assets/ttfl.jpg" alt="The Tron Forge Limited" /></div><span>The Tron Forge Limited</span></Link><nav className="primary-nav" aria-label="Primary"><ul><li><Link href="/">Home</Link></li><li><Link href="/about">About</Link></li><li><Link href="/ecosystem">Ecosystem</Link></li><li><Link href="/partnerships">Partnerships</Link></li><li><Link href="/contact" aria-current="page">Contact</Link></li></ul></nav><div className="nav-actions"><Link href="/partnerships" className="btn nav-cta desktop-only">Partner With Us</Link></div></div></header><nav className="breadcrumb wrap" aria-label="Breadcrumb"><ol><li><Link href="/">Home</Link></li><li aria-current="page">Contact</li></ol></nav><section className="page-title"><div className="wrap"><h1>Contact</h1><p className="lede">Have a question, an idea, or need help? Send the right details to The Tron Forge Limited.</p></div></section><section><div className="wrap"><div className="contact-grid"><div className="contact-item"><h3>General enquiries</h3><div className="role">Questions about The Tron Forge Limited and our technology projects.</div><a href="mailto:info@thetronforge.name.ng">info@thetronforge.name.ng</a></div><div className="contact-item"><h3>MAX AI partnerships</h3><div className="role">Integrations, collaborations, media, and MAX AI opportunities.</div><a href="mailto:partners@max-ai.name.ng">partners@max-ai.name.ng</a></div><div className="contact-item"><h3>MAX AI support</h3><div className="role">Help with MAX AI products and services.</div><a href="mailto:help@max-ai.name.ng">help@max-ai.name.ng</a></div><div className="contact-item"><h3>TTFL Store support</h3><div className="role">Marketplace orders, vendors, and account support.</div><a href="https://www.ttflstore.name.ng/support" target="_blank" rel="noreferrer">TTFL Store Help Center →</a></div></div></div></section><AuthenticatedInquiryForm type="contact" returnPath="/contact#contact-form"/><footer className="site-footer"><div className="wrap"><div className="footer-bottom"><span>© 2026 The Tron Forge Limited. We Forge The Future.</span><span><Link href="/privacy">Privacy Policy</Link> · <Link href="/terms">Terms of Service</Link></span></div></div></footer></main>;
+  return <div className="refresh-page"><TTFLHeader/><main>
+    <section className="refresh-page-hero"><div className="refresh-shell"><p className="refresh-overline">The Tron Forge Limited <span>·</span> Contact</p><h1>Let's start a<br/><span>conversation.</span></h1><p className="refresh-page-lede">Choose the right contact for your question, or send our team a message using your MAX Account.</p></div></section>
+    <section className="refresh-contact-options"><div className="refresh-shell"><div className="refresh-service-heading"><p className="refresh-kicker">Get in touch</p><h2>How can we help?</h2></div><div className="refresh-contact-grid">{contacts.map(([title,desc,label,url])=><article key={title}><h3>{title}</h3><p>{desc}</p><a href={url}>{label} ↗</a></article>)}</div></div></section>
+    <AuthenticatedInquiryForm type="contact" returnPath="/contact#contact-form"/>
+  </main><TTFLFooter/></div>;
 }
