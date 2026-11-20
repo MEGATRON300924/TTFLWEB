@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.max-ai.name.ng/ttfl.png",
+        url: "https://thetronforge.name.ng/assets/ttfl.png",
         width: 1200,
         height: 630,
         alt: "The Tron Forge Limited — Website Design and Digital Services",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: "Professional Website Design in Nigeria | The Tron Forge Limited",
     description:
       "Get a professional website, domain assistance and Google Search setup for ₦20,000 per year.",
-    images: ["https://www.max-ai.name.ng/ttfl.png"],
+    images: ["https://thetronforge.name.ng/assets/ttfl.png"],
   },
 };
 
@@ -75,7 +75,7 @@ const page = `
 <header class="site-header">
   <div class="wrap nav">
     <a href="/" class="brand">
-      <div class="venture-logo"><img src="https://www.max-ai.name.ng/ttfl.png" alt="The Tron Forge Limited" loading="lazy"></div>
+      <div class="venture-logo"><img src="https://thetronforge.name.ng/assets/ttfl.png" alt="The Tron Forge Limited" loading="lazy"></div>
       <span>Tron Forge Limited</span>
     </a>
     <nav class="primary-nav" aria-label="Primary">
@@ -202,7 +202,7 @@ const page = `
     <div class="footer-grid">
       <div class="footer-col">
         <a href="/" class="brand">
-          <div class="venture-logo"><img src="https://www.max-ai.name.ng/ttfl.png" alt="The Tron Forge Limited" loading="lazy"></div>
+          <div class="venture-logo"><img src="https://thetronforge.name.ng/assets/ttfl.png" alt="The Tron Forge Limited" loading="lazy"></div>
           <span>Tron Forge Limited</span>
         </a>
         <p class="footer-tagline">We Forge The Future.</p>
@@ -253,7 +253,7 @@ const serviceSchema = {
       "@id": "https://thetronforge.name.ng/#organization",
       "name": "The Tron Forge Limited",
       "url": "https://thetronforge.name.ng/",
-      "logo": "https://www.max-ai.name.ng/ttfl.png"
+      "logo": "https://thetronforge.name.ng/assets/ttfl.png"
     },
     {
       "@type": "Service",
