@@ -69,7 +69,7 @@ export default function WebsitePlanSuccessfulPage() {
     <main className="website-plan-page">
       <div className="website-plan-wrap">
         <a className="website-plan-brand" href="/">
-          <img src="https://www.max-ai.name.ng/ttfl.png" alt="The Tron Forge Limited" />
+          <img src="https://thetronforge.name.ng/assets/ttfl.png" alt="The Tron Forge Limited" />
           <span>The Tron Forge Limited</span>
         </a>
 
